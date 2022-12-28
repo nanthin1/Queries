@@ -1,0 +1,11 @@
+drop table med_config_1
+go
+select [mc_screencode], [mc_KeyValue], [mc_Group], [mc_caption], [mc_datatype], [mc_lovstring], [mc_min_value], [mc_max_value], [mc_value], [mc_help], [ts], [mc_Group_Order], [mc_detail_Order], [mc_config_pk], [MC_IS_CR], [MC_IS_ST], [MC_IS_SD], [MC_IS_PF], [MC_IS_EP], [mc_is_se], [mc_is_mg], [mc_is_wh], [mc_is_er], [mc_is_pr]
+into med_config_1
+from med_config where tsid in (4346,4349)
+go
+delete from med_config where tsid in (4346,4349)
+go
+insert into med_config ([mc_screencode], [mc_KeyValue], [mc_Group], [mc_caption], [mc_datatype], [mc_lovstring], [mc_min_value], [mc_max_value], [mc_value], [mc_help], [ts], [mc_Group_Order], [mc_detail_Order], [mc_config_pk], [MC_IS_CR], [MC_IS_ST], [MC_IS_SD], [MC_IS_PF], [MC_IS_EP], [mc_is_se], [mc_is_mg], [mc_is_wh], [mc_is_er], [mc_is_pr])
+select [mc_screencode], [mc_KeyValue], [mc_Group], [mc_caption], [mc_datatype], [mc_lovstring], [mc_min_value], [mc_max_value], [mc_value], [mc_help], [ts], [mc_Group_Order], [mc_detail_Order], [mc_config_pk], [MC_IS_CR], [MC_IS_ST], [MC_IS_SD], [MC_IS_PF], [MC_IS_EP], [mc_is_se], [mc_is_mg], [mc_is_wh], [mc_is_er], [mc_is_pr] from  med_config_1
+go
